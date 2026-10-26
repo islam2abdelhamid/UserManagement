@@ -1,33 +1,34 @@
+using UserManagement.Application.Abstraction.Repositories;
 using UserManagement.Application.Abstraction.Services;
 using UserManagement.Domain.Entities;
 
 namespace UserManagement.Infrastructure.Services
 {
-    public class OrderService : IOrderService
+    public class OrderService(IOrderRepository orderRepository) : IOrderService
     {
         public Guid CreateOrder()
         {
-            throw new NotImplementedException();
+            return orderRepository.CreateOrder();
         }
 
         public void DeleteOrder(Guid orderId)
         {
-            throw new NotImplementedException();
+            orderRepository.DeleteOrder(orderId);
         }
 
         public List<Order> GetAllOrders()
         {
-            throw new NotImplementedException();
+            return orderRepository.GetAllOrders();
         }
 
         public Order GetOrderById(Guid orderId)
         {
-            throw new NotImplementedException();
+            return orderRepository.GetOrderById(orderId);
         }
 
         public void UpdateOrder(Guid orderId, Order order)
         {
-            throw new NotImplementedException();
+            orderRepository.UpdateOrder(orderId, order);
         }
     }
 }

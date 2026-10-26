@@ -1,32 +1,51 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using UserManagement.Application.Abstraction.Services;
+using UserManagement.Domain.Entities;
 
 namespace UserManagement.Api.Controllers
 {
-    [Route("[controller]")]
-    public class OrderController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class OrderController : ControllerBase
     {
-        private readonly ILogger<OrderController> _logger;
+        private readonly IOrderService _orderService;
 
-        public OrderController(ILogger<OrderController> logger)
+        public OrderController(IOrderService orderService)
         {
-            _logger = logger;
+            _orderService = orderService;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult GetAllOrders()
         {
-            return View();
+            return Ok(_orderService.GetAllOrders());
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpGet("{id}")]
+        public IActionResult GetOrderById(Guid id)
         {
-            return View("Error!");
+            return Ok(_orderService.GetOrderById(id));
+        }
+
+        [HttpPost]
+        public IActionResult CreateOrder(Order order)
+        {
+            _orderService.CreateOrder();
+            return Ok();
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateOrder(Guid id, Order order)
+        {
+            _orderService.UpdateOrder(id, order);
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteOrder(Guid id)
+        {
+            _orderService.DeleteOrder(id);
+            return Ok();
         }
     }
 }

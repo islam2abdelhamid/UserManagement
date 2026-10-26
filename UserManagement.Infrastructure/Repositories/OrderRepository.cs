@@ -7,27 +7,29 @@ namespace UserManagement.Infrastructure.Repositories
     {
         public Guid CreateOrder()
         {
-            throw new NotImplementedException();
+            return Guid.NewGuid();
         }
 
         public void DeleteOrder(Guid orderId)
         {
-            throw new NotImplementedException();
+            // TODO: Implement delete order
         }
 
         public List<Order> GetAllOrders()
         {
-            throw new NotImplementedException();
+            // TODO: Implement get all orders
+            return new List<Order>();
         }
 
         public Order GetOrderById(Guid orderId)
         {
-            throw new NotImplementedException();
+            // TODO: Implement get order by id
+            return new Order();
         }
 
         public void UpdateOrder(Guid orderId, Order order)
         {
-            throw new NotImplementedException();
+            // TODO: Implement update order
         }
     }
 }

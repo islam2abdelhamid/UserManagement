@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "MepDL/LY1g0xK7t4oqyAQzb55CLIGuMuUy3LUfpX/FZUdgFeMvrjfcc1byaq6H3ufUQpZapttGHozIiLoY/l5A==",
+  "dgSpecHash": "hP+e6eAPPjy2A8ktvD7n0IhWRPBZ+biQb+NORqkZKD7pNcIWAOj7DiTrPqq1L2r0Leaa2YQAjQyXObGakQn05A==",
   "success": true,
   "projectFilePath": "/home/islam/playground/csharp/documentation/UserManagement/UserManagement.Infrastructure/UserManagement.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/islam/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.2/microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
