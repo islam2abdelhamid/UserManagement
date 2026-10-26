@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "UserManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "UserManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UserManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserManagement.Application.dll": {}
+        }
+      },
+      "UserManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UserManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserManagement.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "UserManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../UserManagement.Application/UserManagement.Application.csproj",
+      "msbuildProject": "../UserManagement.Application/UserManagement.Application.csproj"
+    },
+    "UserManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../UserManagement.Domain/UserManagement.Domain.csproj",
+      "msbuildProject": "../UserManagement.Domain/UserManagement.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "UserManagement.Application >= 1.0.0",
+      "UserManagement.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/home/islam/.nuget/packages/": {}
@@ -31,7 +69,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/islam/playground/csharp/documentation/UserManagement/UserManagement.Application/UserManagement.Application.csproj": {
+              "projectPath": "/home/islam/playground/csharp/documentation/UserManagement/UserManagement.Application/UserManagement.Application.csproj"
+            },
+            "/home/islam/playground/csharp/documentation/UserManagement/UserManagement.Domain/UserManagement.Domain.csproj": {
+              "projectPath": "/home/islam/playground/csharp/documentation/UserManagement/UserManagement.Domain/UserManagement.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

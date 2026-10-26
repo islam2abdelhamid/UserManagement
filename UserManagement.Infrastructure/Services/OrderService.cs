@@ -1,4 +1,5 @@
 using UserManagement.Application.Abstraction.Services;
+using UserManagement.Domain.Entities;
 
 namespace UserManagement.Infrastructure.Services
 {
