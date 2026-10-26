@@ -2,7 +2,7 @@ using UserManagement.Application.Abstraction.Repositories;
 using UserManagement.Application.Abstraction.Services;
 using UserManagement.Domain.Entities;
 
-namespace UserManagement.Infrastructure.Services
+namespace UserManagement.Application.Services
 {
     public class OrderService(IOrderRepository orderRepository) : IOrderService
     {
