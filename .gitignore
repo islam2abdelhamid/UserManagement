@@ -74,3 +74,27 @@ ScaffoldingReadMe.txt
 *~
 .DS_Store
 Thumbs.db
+
+## UserManagement.Api
+UserManagement.Api/bin/
+UserManagement.Api/obj/
+UserManagement.Api/Properties/
+UserManagement.Api/Properties/launchSettings.json
+UserManagement.Api/Properties/launchSettings.json
+UserManagement.Api/Properties/launchSettings.json
+UserManagement.Api/Properties/launchSettings.json
+UserManagement.Api/Properties/launchSettings.json
+
+## UserManagement.Application
+UserManagement.Application/bin/
+UserManagement.Application/obj/
+UserManagement.Application/Properties/
+UserManagement.Application/Properties/launchSettings.json
+UserManagement.Application/Properties/launchSettings.json
+
+## UserManagement.Infrastructure
+UserManagement.Infrastructure/bin/
+UserManagement.Infrastructure/obj/
+UserManagement.Infrastructure/Properties/
+UserManagement.Infrastructure/Properties/launchSettings.json
+UserManagement.Infrastructure/Properties/launchSettings.json
